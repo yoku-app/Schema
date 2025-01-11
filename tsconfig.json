@@ -1,10 +1,12 @@
 {
-    "compilerOptions": {
-      "strict": true,
-      "esModuleInterop": true,
-      "target": "ES6",
-      "moduleResolution": "node"
-    },
-    "include": ["schemas/**/*.json"]
-  }
-  
+  "compilerOptions": {
+    "strict": true,
+    "esModuleInterop": true,
+    "target": "ES6",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true
+  },
+  "include": ["schemas/**/*.json"],
+  "exclude": ["node_modules", "**/*.ts"]
+}
