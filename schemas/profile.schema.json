@@ -1,0 +1,38 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "id": { "type": "number" },
+      "userId": { "type": "string" },
+      "email": { "type": "string", "format": "email" },
+      "phone": { "type": ["string", "null"] },
+      "displayName": { "type": "string" },
+      "avatarUrl": { "type": ["string", "null"] },
+      "createdAt": { "type": "string", "format": "date-time" },
+      "updatedAt": { "type": ["string", "null"], "format": "date-time" },
+      "dob": { "type": ["string", "null"], "format": "date-time" },
+      "onboardingCompletion": {
+        "type": ["object", "null"],
+        "properties": {
+          "respondent": { "type": ["string", "null"], "format": "date-time" },
+          "creator": { "type": ["string", "null"], "format": "date-time" },
+          "core": { "type": ["string", "null"], "format": "date-time" }
+        },
+        "required": []
+      },
+      "focus": {
+        "type": "string",
+        "enum": ["respondent", "creator", "hybrid"]
+      }
+    },
+    "required": [
+      "id",
+      "userId",
+      "email",
+      "displayName",
+      "createdAt",
+      "focus"
+    ],
+    "additionalProperties": false
+  }
+  
