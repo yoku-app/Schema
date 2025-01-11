@@ -2,8 +2,6 @@
   "name": "@yoku-app/shared-schemas",
   "version": "1.0.4",
   "description": "Shared JSON Schemas for All Yoku Services and Clients",
-  "main": "index.js",
-  "types": "dist/index.d.ts",
   "scripts": {
     "generate": "json2ts -i schemas/ -o dist/types/ && cp -R schemas/ dist/schemas/"
   },
@@ -22,7 +20,7 @@
     "typescript": "^5.7.3"
   },
   "files": [
-    "dist/**/*.d.ts",
+    "dist/files/*.d.ts",
     "dist/schemas/**/*.json"
   ]
 }
