@@ -14,7 +14,7 @@
     "url": "https://github.com/yoku-app/Schema"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "@yoku-app:registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "json-schema-to-typescript": "^15.0.3",
