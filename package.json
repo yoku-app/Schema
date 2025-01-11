@@ -5,7 +5,7 @@
   "main": "index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "generate": "json2ts -i schemas/ -o dist/"
+    "generate": "json2ts -i schemas/ -o dist/ && cp -R schemas/ dist/schemas/"
   },
   "author": "Jared Tucker",
   "license": "MIT",
@@ -20,5 +20,9 @@
     "json-schema-to-typescript": "^15.0.3",
     "tsc": "^2.0.4",
     "typescript": "^5.7.3"
-  }
+  },
+  "files": [
+    "dist/**/*.d.ts",
+    "dist/schemas/**/*.json"
+  ]
 }
