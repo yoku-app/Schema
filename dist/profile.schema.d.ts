@@ -5,7 +5,7 @@
  * and run json-schema-to-typescript to regenerate this file.
  */
 
-export interface ProfileSchema {
+export interface UserProfile {
   id: number;
   userId: string;
   email: string;
