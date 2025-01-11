@@ -1,6 +1,6 @@
 {
   "name": "@yoku-app/shared-schemas",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Shared JSON Schemas for All Yoku Services and Clients",
   "main": "index.js",
   "types": "dist/index.d.ts",
