@@ -1,11 +1,20 @@
 {
-  "name": "yoku-schema",
+  "name": "@yoku-app/shared-schemas",
   "version": "1.0.0",
   "description": "Shared JSON Schemas for All Yoku Services and Clients",
   "main": "index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "generate": "json2ts -i schemas/ -o dist/"
+  },
+  "author": "Jared Tucker",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoku-app/Schema"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "dependencies": {
     "json-schema-to-typescript": "^15.0.3",
