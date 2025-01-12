@@ -20,7 +20,7 @@
     "typescript": "^5.7.3"
   },
   "files": [
-    "dist/files/*.d.ts",
+    "dist/types/*.d.ts",
     "dist/schemas/**/*.json"
   ]
 }
