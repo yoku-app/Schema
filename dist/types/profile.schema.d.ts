@@ -6,19 +6,19 @@
  */
 
 export interface UserProfile {
-    id: number;
-    userId: string;
-    phone?: string;
-    focus: ("RESPONDENT" | "CREATOR" | "HYBRID") | null;
-    email: string;
-    displayName: string;
-    avatarUrl?: string | "" | null;
-    createdAt: string;
-    updatedAt?: string;
-    onboardingCompletion?: {
-        respondent?: string;
-        creator?: string;
-        core?: string;
-        [k: string]: unknown;
-    };
+  id: number;
+  userId: string;
+  phone?: string;
+  focus: ("RESPONDENT" | "CREATOR" | "HYBRID") | null;
+  email: string;
+  displayName: string;
+  avatarUrl?: string | null;
+  createdAt: string;
+  updatedAt?: string;
+  onboardingCompletion?: {
+    respondent?: string;
+    creator?: string;
+    core?: string;
+    [k: string]: unknown;
+  };
 }

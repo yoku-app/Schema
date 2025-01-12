@@ -19,11 +19,7 @@
         "email": { "type": "string", "format": "email" },
         "displayName": { "type": "string" },
         "avatarUrl": {
-            "oneOf": [
-                { "type": "string", "format": "uri" },
-                { "type": "string", "enum": [""] },
-                { "type": "null" }
-            ]
+            "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
         },
         "createdAt": { "type": "string", "format": "date-time" },
         "updatedAt": {
