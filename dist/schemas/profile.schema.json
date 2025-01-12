@@ -2,27 +2,56 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "UserProfile",
     "type": "object",
-    "required": ["id", "userId", "email", "displayName", "createdAt"],
+    "required": ["id", "userId", "email", "displayName", "createdAt", "focus"],
     "properties": {
-            "id": { "type": "integer" },
-            "userId": { "type": "string", "format": "uuid" },
-            "phone": { "type": "string", "nullable": true },
-            "focus": { "type": "string", "enum": ["RESPONDENT", "CREATOR", "HYBRID"] },
-            "email": { "type": "string", "format": "email" },
-            "displayName": { "type": "string" },
-            "avatarUrl": { "type": "string", "format": "uri", "nullable": true },
-            "createdAt": { "type": "string", "format": "date-time" },
-            "updatedAt": { "type": "string", "format": "date-time", "nullable": true },
-            "onboardingCompletion": {
-              "type": "object",
-              "nullable": true,
-              "properties": {
-                "respondent": { "type": "string", "format": "date-time", "nullable": true },
-                "creator": { "type": "string", "format": "date-time", "nullable": true },
-                "core": { "type": "string", "format": "date-time", "nullable": true }
-              }
+        "id": { "type": "integer" },
+        "userId": { "type": "string", "format": "uuid" },
+        "phone": { "type": "string", "nullable": true },
+        "focus": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "enum": ["RESPONDENT", "CREATOR", "HYBRID"]
+                },
+                { "type": "null" }
+            ]
+        },
+        "email": { "type": "string", "format": "email" },
+        "displayName": { "type": "string" },
+        "avatarUrl": {
+            "oneOf": [
+                { "type": "string", "format": "uri" },
+                { "type": "string", "enum": [""] },
+                { "type": "null" }
+            ]
+        },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+        },
+        "onboardingCompletion": {
+            "type": "object",
+            "nullable": true,
+            "properties": {
+                "respondent": {
+                    "type": "string",
+                    "format": "date-time",
+                    "nullable": true
+                },
+                "creator": {
+                    "type": "string",
+                    "format": "date-time",
+                    "nullable": true
+                },
+                "core": {
+                    "type": "string",
+                    "format": "date-time",
+                    "nullable": true
+                }
             }
-          },
+        }
+    },
     "additionalProperties": false
-  }
-  
+}
