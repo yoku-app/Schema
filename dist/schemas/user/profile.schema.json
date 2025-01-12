@@ -2,7 +2,15 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "UserProfile",
     "type": "object",
-    "required": ["id", "userId", "email", "displayName", "createdAt", "focus"],
+    "required": [
+        "id",
+        "userId",
+        "email",
+        "displayName",
+        "createdAt",
+        "focus",
+        "avatarUrl"
+    ],
     "properties": {
         "id": { "type": "integer" },
         "userId": { "type": "string", "format": "uuid" },
@@ -15,6 +23,11 @@
                 },
                 { "type": "null" }
             ]
+        },
+        "dob": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
         },
         "email": { "type": "string", "format": "email" },
         "displayName": { "type": "string" },

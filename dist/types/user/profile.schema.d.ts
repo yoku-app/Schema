@@ -10,9 +10,10 @@ export interface UserProfile {
   userId: string;
   phone?: string;
   focus: ("RESPONDENT" | "CREATOR" | "HYBRID") | null;
+  dob?: string;
   email: string;
   displayName: string;
-  avatarUrl?: string | null;
+  avatarUrl: string | null;
   createdAt: string;
   updatedAt?: string;
   onboardingCompletion?: {
