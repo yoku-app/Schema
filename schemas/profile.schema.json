@@ -7,7 +7,7 @@
             "id": { "type": "integer" },
             "userId": { "type": "string", "format": "uuid" },
             "phone": { "type": "string", "nullable": true },
-            "focus": { "type": "string", "enum": ["RESPONDENT", "CREATOR", "HYBRID"] },
+            "focus": { "type": "string", "enum": ["RESPONDENT", "CREATOR", "HYBRID"], "nullable": true },
             "email": { "type": "string", "format": "email" },
             "displayName": { "type": "string" },
             "avatarUrl": { "type": "string", "format": "uri", "nullable": true },
