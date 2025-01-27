@@ -17,21 +17,63 @@
         "averageSurveyReviewRating"
     ],
     "properties": {
-        "id": { "type": "string", "format": "uuid" },
-        "industryId": { "type": "string", "format": "uuid" },
-        "creatorId": { "type": "string", "format": "uuid" },
-        "name": { "type": "string" },
-        "description": { "type": "string" },
-        "email": { "type": "string", "format": "email" },
-        "memberCount": { "type": "integer", "minimum": 0 },
-        "avatarURL": {
-            "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
+        "id": {
+            "type": "string",
+            "format": "uuid"
         },
-        "publicStatus": { "type": "boolean" },
-        "createdAt": { "type": "string", "format": "date-time", "tsType": "Date" },
-        "updatedAt": { "type": "string", "format": "date-time", "tsType": "Date" },
-        "surveyCreationCount": { "type": "integer", "minimum": 0 },
-        "averageSurveyReviewRating": { "type": "number", "minimum": 0, "maximum": 5 }
+        "industryId": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "creatorId": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string",
+            "format": "email"
+        },
+        "memberCount": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "avatarURL": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "publicStatus": {
+            "type": "boolean"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "surveyCreationCount": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "averageSurveyReviewRating": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+        }
     },
     "additionalProperties": false
 }

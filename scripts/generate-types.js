@@ -2,8 +2,31 @@ const { compile } = require('json-schema-to-typescript');
 const fs = require('fs');
 const path = require('path');
 
+function removeTsTypeProperties(obj) {
+    if (Array.isArray(obj)) {
+        return obj.map(item => removeTsTypeProperties(item));
+    }
+    if (typeof obj === 'object' && obj !== null) {
+        const newObj = {};
+        for (const [key, value] of Object.entries(obj)) {
+            if (key !== 'tsType') {
+                newObj[key] = removeTsTypeProperties(value);
+            }
+        }
+        return newObj;
+    }
+    return obj;
+}
+
 async function generateTypes(schemaPath, outputPath) {
     const schema = JSON.parse(fs.readFileSync(schemaPath, 'utf8'));
+    const cleanSchema = removeTsTypeProperties(schema);
+    
+    // Write the cleaned schema to dist
+    const distSchemaPath = outputPath.replace('/types/', '/schemas/').replace('.d.ts', '.schema.json');
+    fs.mkdirSync(path.dirname(distSchemaPath), { recursive: true });
+    fs.writeFileSync(distSchemaPath, JSON.stringify(cleanSchema, null, 4));
+
     const typeName = schema.title || path.basename(schemaPath, '.schema.json');
     
     try {

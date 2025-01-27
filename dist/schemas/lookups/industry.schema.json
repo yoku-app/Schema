@@ -10,11 +10,24 @@
         "updatedAt"
     ],
     "properties": {
-        "id": { "type": "string", "format": "uuid" },
-        "name": { "type": "string" },
-        "description": { "type": "string" },
-        "createdAt": { "type": "string", "format": "date-time", "tsType": "Date" },
-        "updatedAt": { "type": "string", "format": "date-time", "tsType": "Date" }
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "name": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "updatedAt": {
+            "type": "string",
+            "format": "date-time"
+        }
     },
     "additionalProperties": false
 }

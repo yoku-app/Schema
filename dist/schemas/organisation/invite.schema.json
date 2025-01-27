@@ -12,17 +12,45 @@
         "createdAt"
     ],
     "properties": {
-        "id": { "type": "string", "format": "uuid" },
-        "organisationId": { "type": "string", "format": "uuid" },
-        "userId": { "type": "string", "format": "uuid", "nullable": true },
-        "email": { "type": "string", "format": "email" },
-        "token": { "type": "string", "minLength": 12, "maxLength": 12 },
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "organisationId": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "userId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+        },
+        "email": {
+            "type": "string",
+            "format": "email"
+        },
+        "token": {
+            "type": "string",
+            "minLength": 12,
+            "maxLength": 12
+        },
         "inviteStatus": {
             "type": "string",
-            "enum": ["PENDING", "ACCEPTED", "REJECTED", "EXPIRED"]
+            "enum": [
+                "PENDING",
+                "ACCEPTED",
+                "REJECTED",
+                "EXPIRED"
+            ]
         },
-        "expiresAt": { "type": "string", "format": "date-time", "tsType": "Date" },
-        "createdAt": { "type": "string", "format": "date-time", "tsType": "Date" }
+        "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        }
     },
     "additionalProperties": false
 }

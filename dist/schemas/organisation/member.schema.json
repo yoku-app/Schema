@@ -9,14 +9,26 @@
     "properties": {
         "id": {
             "type": "object",
-            "required": ["organisationId", "userId"],
+            "required": [
+                "organisationId",
+                "userId"
+            ],
             "properties": {
-                "organisationId": { "type": "string", "format": "uuid" },
-                "userId": { "type": "string", "format": "uuid" }
+                "organisationId": {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                "userId": {
+                    "type": "string",
+                    "format": "uuid"
+                }
             },
             "additionalProperties": false
         },
-        "memberSince": { "type": "string", "format": "date-time", "tsType": "Date" }
+        "memberSince": {
+            "type": "string",
+            "format": "date-time"
+        }
     },
     "additionalProperties": false
 }

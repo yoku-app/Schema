@@ -11,33 +11,59 @@
         "avatarUrl"
     ],
     "properties": {
-        "userId": { "type": "string", "format": "uuid" },
-        "phone": { "type": "string", "nullable": true },
+        "userId": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "phone": {
+            "type": "string",
+            "nullable": true
+        },
         "focus": {
             "oneOf": [
                 {
                     "type": "string",
-                    "enum": ["RESPONDENT", "CREATOR", "HYBRID"]
+                    "enum": [
+                        "RESPONDENT",
+                        "CREATOR",
+                        "HYBRID"
+                    ]
                 },
-                { "type": "null" }
+                {
+                    "type": "null"
+                }
             ]
         },
         "dob": {
             "type": "string",
             "format": "date",
-            "tsType": "Date",
             "nullable": true
         },
-        "email": { "type": "string", "format": "email" },
-        "displayName": { "type": "string" },
-        "avatarUrl": {
-            "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
+        "email": {
+            "type": "string",
+            "format": "email"
         },
-        "createdAt": { "type": "string", "format": "date-time", "tsType": "Date" },
+        "displayName": {
+            "type": "string"
+        },
+        "avatarUrl": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time"
+        },
         "updatedAt": {
             "type": "string",
             "format": "date-time",
-            "tsType": "Date",
             "nullable": true
         },
         "onboardingCompletion": {
@@ -47,19 +73,16 @@
                 "respondent": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
                     "nullable": true
                 },
                 "creator": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
                     "nullable": true
                 },
                 "core": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
                     "nullable": true
                 }
             }

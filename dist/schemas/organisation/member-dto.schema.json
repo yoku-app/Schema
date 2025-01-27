@@ -9,11 +9,27 @@
         "avatarUrl"
     ],
     "properties": {
-        "id": { "type": "string", "format": "uuid" },
-        "displayName": { "type": "string" },
-        "email": { "type": "string", "format": "email" },
+        "id": {
+            "type": "string",
+            "format": "uuid"
+        },
+        "displayName": {
+            "type": "string"
+        },
+        "email": {
+            "type": "string",
+            "format": "email"
+        },
         "avatarUrl": {
-            "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uri"
+                },
+                {
+                    "type": "null"
+                }
+            ]
         }
     },
     "additionalProperties": false
