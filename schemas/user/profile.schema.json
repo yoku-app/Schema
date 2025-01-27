@@ -3,7 +3,6 @@
     "title": "UserProfile",
     "type": "object",
     "required": [
-        "id",
         "userId",
         "email",
         "displayName",
@@ -12,7 +11,6 @@
         "avatarUrl"
     ],
     "properties": {
-        "id": { "type": "integer" },
         "userId": { "type": "string", "format": "uuid" },
         "phone": { "type": "string", "nullable": true },
         "focus": {

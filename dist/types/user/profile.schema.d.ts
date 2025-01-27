@@ -6,7 +6,6 @@
  */
 
 export interface UserProfile {
-  id: number;
   userId: string;
   phone?: string;
   focus: ("RESPONDENT" | "CREATOR" | "HYBRID") | null;
