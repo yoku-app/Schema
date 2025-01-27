@@ -3,7 +3,7 @@
     "version": "1.0.3",
     "description": "Shared JSON Schemas for All Yoku Services and Clients",
     "scripts": {
-        "generate": "json2ts -i schemas/ -o dist/types/ && cp -R schemas/ dist/schemas/"
+        "generate": "node scripts/generate-types.js"
     },
     "author": "Jared Tucker",
     "license": "MIT",

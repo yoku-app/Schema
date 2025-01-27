@@ -25,6 +25,7 @@
         "dob": {
             "type": "string",
             "format": "date",
+            "tsType": "Date",
             "nullable": true
         },
         "email": { "type": "string", "format": "email" },
@@ -32,10 +33,11 @@
         "avatarUrl": {
             "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
         },
-        "createdAt": { "type": "string", "format": "date-time" },
+        "createdAt": { "type": "string", "format": "date-time", "tsType": "Date" },
         "updatedAt": {
             "type": "string",
             "format": "date-time",
+            "tsType": "Date",
             "nullable": true
         },
         "onboardingCompletion": {
@@ -45,16 +47,19 @@
                 "respondent": {
                     "type": "string",
                     "format": "date-time",
+                    "tsType": "Date",
                     "nullable": true
                 },
                 "creator": {
                     "type": "string",
                     "format": "date-time",
+                    "tsType": "Date",
                     "nullable": true
                 },
                 "core": {
                     "type": "string",
                     "format": "date-time",
+                    "tsType": "Date",
                     "nullable": true
                 }
             }
