@@ -1,5 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/invite.schema.json",
     "title": "OrganisationInvite",
     "type": "object",
     "required": [
@@ -21,8 +22,16 @@
             "type": "string",
             "enum": ["PENDING", "ACCEPTED", "REJECTED", "EXPIRED"]
         },
-        "expiresAt": { "type": "string", "format": "date-time", "tsType": "Date" },
-        "createdAt": { "type": "string", "format": "date-time", "tsType": "Date" }
+        "expiresAt": {
+            "type": "string",
+            "format": "date-time",
+            "tsType": "Date"
+        },
+        "createdAt": {
+            "type": "string",
+            "format": "date-time",
+            "tsType": "Date"
+        }
     },
     "additionalProperties": false
 }

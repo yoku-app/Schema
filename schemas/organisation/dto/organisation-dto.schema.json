@@ -8,7 +8,11 @@
         "description",
         "email",
         "memberCount",
-        "surveyCreationCount"
+        "surveyCreationCount",
+        "publicStatus",
+        "averageSurveyReviewRating",
+        "industry",
+        "creator"
     ],
     "properties": {
         "id": { "type": "string", "format": "uuid" },
@@ -19,7 +23,29 @@
         "avatarURL": {
             "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
         },
-        "surveyCreationCount": { "type": "integer", "minimum": 0 }
+        "surveyCreationCount": { "type": "integer", "minimum": 0 },
+        "publicStatus": { "type": "boolean" },
+        "averageSurveyReviewRating": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+        },
+        "industry": {
+            "oneOf": [
+                { "type": "null" },
+                {
+                    "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/lookups/industry.schema.json"
+                }
+            ]
+        },
+        "creator": {
+            "oneOf": [
+                { "type": "null" },
+                {
+                    "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/profile.schema.json"
+                }
+            ]
+        }
     },
     "additionalProperties": false
 }
