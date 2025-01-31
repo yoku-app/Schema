@@ -14,7 +14,9 @@
     ],
     "properties": {
         "id": { "type": "string", "format": "uuid" },
-        "organisationId": { "type": "string", "format": "uuid" },
+        "organisation": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/dto/organisation-partial-dto.schema.json"
+        },
         "userId": { "type": "string", "format": "uuid", "nullable": true },
         "email": { "type": "string", "format": "email" },
         "token": { "type": "string", "minLength": 12, "maxLength": 12 },
