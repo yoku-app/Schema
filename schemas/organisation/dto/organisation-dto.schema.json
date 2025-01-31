@@ -11,9 +11,7 @@
         "memberCount",
         "surveyCreationCount",
         "publicStatus",
-        "averageSurveyReviewRating",
-        "industry",
-        "creator"
+        "averageSurveyReviewRating"
     ],
     "properties": {
         "id": { "type": "string", "format": "uuid" },
@@ -31,22 +29,8 @@
             "minimum": 0,
             "maximum": 5
         },
-        "industry": {
-            "oneOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/lookups/industry.schema.json"
-                },
-                { "type": "null" }
-            ]
-        },
-        "creator": {
-            "oneOf": [
-                {
-                    "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/profile.schema.json"
-                },
-                { "type": "null" }
-            ]
-        }
+        "industry": {"$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/lookups/industry.schema.json"},
+        "creator": {"$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/profile.schema.json"}
     },
     "additionalProperties": false
 }
