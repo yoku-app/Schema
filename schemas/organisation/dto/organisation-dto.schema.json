@@ -33,18 +33,18 @@
         },
         "industry": {
             "oneOf": [
-                { "type": "null" },
                 {
                     "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/lookups/industry.schema.json"
-                }
+                },
+                { "type": "null" }
             ]
         },
         "creator": {
             "oneOf": [
-                { "type": "null" },
                 {
                     "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/profile.schema.json"
-                }
+                },
+                { "type": "null" }
             ]
         }
     },
