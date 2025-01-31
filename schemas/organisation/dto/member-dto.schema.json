@@ -3,13 +3,21 @@
     "$id": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/dto/member-dto.schema.json",
     "title": "OrgMemberDTO",
     "type": "object",
-    "required": ["id", "displayName", "email", "avatarUrl"],
+    "required": ["id", "displayName", "email", "avatarUrl", "memberSince", "organisation"],
     "properties": {
         "id": { "type": "string", "format": "uuid" },
         "displayName": { "type": "string" },
         "email": { "type": "string", "format": "email" },
         "avatarUrl": {
             "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
+        },
+        "memberSince": {
+            "type": "string",
+            "format": "date-time",
+            "tsType": "Date"
+        },
+        "organisation": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/dto/organisation-partial-dto.schema.json"
         }
     },
     "additionalProperties": false
