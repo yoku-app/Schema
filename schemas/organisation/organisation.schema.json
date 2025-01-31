@@ -8,19 +8,18 @@
         "industryId",
         "creatorId",
         "name",
-        "description",
         "email",
         "memberCount",
         "publicStatus",
         "createdAt",
         "updatedAt",
         "surveyCreationCount",
-        "averageSurveyReviewRating"
+        "averageSurveyReviewRating",
+        "industry",
+        "creator"
     ],
     "properties": {
         "id": { "type": "string", "format": "uuid" },
-        "industryId": { "type": "string", "format": "uuid" },
-        "creatorId": { "type": "string", "format": "uuid" },
         "name": { "type": "string" },
         "description": { "type": "string" },
         "email": { "type": "string", "format": "email" },
@@ -44,6 +43,12 @@
             "type": "number",
             "minimum": 0,
             "maximum": 5
+        },
+        "industry": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/lookups/industry.schema.json"
+        },
+        "creator": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/profile.schema.json"
         }
     },
     "additionalProperties": false
