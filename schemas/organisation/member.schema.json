@@ -3,7 +3,7 @@
     "$id": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/member.schema.json",
     "title": "OrganisationMember",
     "type": "object",
-    "required": ["id", "memberSince"],
+    "required": ["id", "memberSince", "user", "organisation"],
     "properties": {
         "id": {
             "type": "object",
@@ -18,7 +18,14 @@
             "type": "string",
             "format": "date-time",
             "tsType": "Date"
+        },
+        "user": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/profile.schema.json"
+        },
+        "organisation": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/organisation.schema.json"
         }
+
     },
     "additionalProperties": false
 }

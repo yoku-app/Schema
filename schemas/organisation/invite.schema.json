@@ -5,7 +5,7 @@
     "type": "object",
     "required": [
         "id",
-        "organisationId",
+        "organisation",
         "email",
         "token",
         "inviteStatus",
@@ -14,8 +14,12 @@
     ],
     "properties": {
         "id": { "type": "string", "format": "uuid" },
-        "organisationId": { "type": "string", "format": "uuid" },
-        "userId": { "type": "string", "format": "uuid", "nullable": true },
+        "organisation": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/organisation.schema.json"
+        },
+        "user" : {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/profile.schema.json"
+        },
         "email": { "type": "string", "format": "email" },
         "token": { "type": "string", "minLength": 12, "maxLength": 12 },
         "inviteStatus": {

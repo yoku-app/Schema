@@ -6,7 +6,7 @@
     "required": [
         "id",
         "organisation",
-        "user",
+        "email",
         "token",
         "inviteStatus",
         "expiresAt",
@@ -20,6 +20,7 @@
         "user" : {
             "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/dto/user-partial-dto.schema.json"
         },
+        "email": { "type": "string", "format": "email" },
         "token": { "type": "string", "minLength": 12, "maxLength": 12 },
         "inviteStatus": {
             "type": "string",
