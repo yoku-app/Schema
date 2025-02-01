@@ -4,7 +4,7 @@
     "description": "Shared JSON Schemas for All Yoku Services and Clients",
     "scripts": {
         "generate-schema-map": "node scripts/generate-schema-map.js",
-        "generate": "node scripts/generate-types.js && npm run generate-schema-map"
+        "generate": "rm -r dist && node scripts/generate-types.js && npm run generate-schema-map "
     },
     "author": "Jared Tucker",
     "license": "MIT",
