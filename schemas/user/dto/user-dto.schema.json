@@ -22,7 +22,6 @@
             "tsType": "Date"
         },
         "focus": {
-            "nullable": true,
             "oneOf": [
                 {
                     "type": "string",
@@ -52,7 +51,8 @@
                     "tsType": "Date",
                     "nullable": true
                 }
-            }
+            },
+            "additionalProperties": false
         }
     },
     "additionalProperties": false
