@@ -3,7 +3,7 @@
     "$id": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/dto/member-dto.schema.json",
     "title": "OrgMemberDTO",
     "type": "object",
-    "required": ["user", "memberSince", "organisation", "position"],
+    "required": ["memberSince", "position"],
     "properties": {
         "user": {
             "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/user/dto/user-partial-dto.schema.json"
