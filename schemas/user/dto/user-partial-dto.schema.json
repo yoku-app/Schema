@@ -10,11 +10,10 @@
         "dob": {
             "type": "string",
             "format": "date",
-            "tsType": "Date",
-            "nullable": true
+            "tsType": "Date"
         },
         "email": { "type": "string", "format": "email" },
-        "avatarUrl": { "type": "string", "format": "uri", "nullable": true }
+        "avatarUrl": { "type": "string", "format": "uri" }
     },
     "additionalProperties": false
 }

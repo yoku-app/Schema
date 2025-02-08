@@ -27,8 +27,7 @@
     "memberCount": { "type": "integer", "minimum": 0 },
     "avatarURL": {
         "type": "string",
-        "format": "uri",
-        "nullable": true
+        "format": "uri"
     },
     "publicStatus": { "type": "boolean" },
     "createdAt": {

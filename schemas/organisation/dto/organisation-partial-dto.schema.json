@@ -10,8 +10,7 @@
         "description": { "type": "string" },
         "avatarURL": {
             "type": "string",
-            "format": "uri",
-            "nullable": true
+            "format": "uri"
         },
         "publicStatus": { "type": "boolean" }
     },

@@ -6,24 +6,21 @@
     "required": ["userId", "email", "displayName", "createdAt"],
     "properties": {
         "userId": { "type": "string", "format": "uuid" },
-        "phone": { "type": "string", "nullable": true },
+        "phone": { "type": "string" },
         "focus": {
-            "nullable": true,
             "type": "string",
             "enum": ["RESPONDENT", "CREATOR", "HYBRID"]
         },
         "dob": {
             "type": "string",
             "format": "date",
-            "tsType": "Date",
-            "nullable": true
+            "tsType": "Date"
         },
         "email": { "type": "string", "format": "email" },
         "displayName": { "type": "string" },
         "avatarUrl": {
             "type": "string",
-            "format": "uri",
-            "nullable": true
+            "format": "uri"
         },
         "createdAt": {
             "type": "string",
@@ -33,30 +30,25 @@
         "updatedAt": {
             "type": "string",
             "format": "date-time",
-            "tsType": "Date",
-            "nullable": true
+            "tsType": "Date"
         },
         "onboardingCompletion": {
             "type": "object",
-            "nullable": true,
             "properties": {
                 "respondent": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
-                    "nullable": true
+                    "tsType": "Date"
                 },
                 "creator": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
-                    "nullable": true
+                    "tsType": "Date"
                 },
                 "core": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
-                    "nullable": true
+                    "tsType": "Date"
                 }
             }
         }

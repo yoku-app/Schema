@@ -15,7 +15,6 @@
         },
         "description": {
             "type": "string",
-            "nullable": true,
             "description": "Optional description of the permission"
         },
         "requiresHierarchy": {

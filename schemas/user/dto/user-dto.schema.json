@@ -7,15 +7,14 @@
     "properties": {
         "id": { "type": "string", "format": "uuid" },
         "name": { "type": "string" },
-        "phone": { "type": "string", "nullable": true },
+        "phone": { "type": "string" },
         "dob": {
             "type": "string",
             "format": "date",
-            "tsType": "Date",
-            "nullable": true
+            "tsType": "Date"
         },
         "email": { "type": "string", "format": "email" },
-        "avatarUrl": { "type": "string", "format": "uri", "nullable": true },
+        "avatarUrl": { "type": "string", "format": "uri" },
         "createdAt": {
             "type": "string",
             "format": "date-time",
@@ -31,25 +30,21 @@
         },
         "onboardingCompletion": {
             "type": "object",
-            "nullable": true,
             "properties": {
                 "respondent": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
-                    "nullable": true
+                    "tsType": "Date"
                 },
                 "creator": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
-                    "nullable": true
+                    "tsType": "Date"
                 },
                 "core": {
                     "type": "string",
                     "format": "date-time",
-                    "tsType": "Date",
-                    "nullable": true
+                    "tsType": "Date"
                 }
             },
             "additionalProperties": false
