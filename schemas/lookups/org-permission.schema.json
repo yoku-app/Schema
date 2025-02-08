@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/lookups/org-permission.schema.json",
+    "title": "OrganisationPermission",
+    "type": "object",
+    "required": ["id", "name", "requiresHierarchy"],
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Unique ID for the permission"
+        },
+        "name": {
+            "type": "string",
+            "enum": [
+                "ORGANISATION_EDIT",
+                "ORGANISATION_DELETE",
+                "ORGANISATION_VIEW_BILLING",
+                "ORGANISATION_MANAGE_BILLING",
+                "MEMBER_INVITE",
+                "MEMBER_REMOVE",
+                "MEMBER_UPDATE_ROLE",
+                "ROLE_CREATE",
+                "ROLE_DELETE",
+                "ROLE_UPDATE",
+                "ROLE_ASSIGN_PERMISSION",
+                "SURVEY_CREATE",
+                "SURVEY_EDIT",
+                "SURVEY_DELETE",
+                "SURVEY_VIEW_RESULTS",
+                "AUDIT_VIEW",
+                "AUDIT_DOWNLOAD"
+            ],
+            "description": "Permission name"
+        },
+        "description": {
+            "type": "string",
+            "nullable": true,
+            "description": "Optional description of the permission"
+        },
+        "requiresHierarchy": {
+            "type": "boolean",
+            "description": "Indicates if the permission requires hierarchy enforcement"
+        }
+    }
+}

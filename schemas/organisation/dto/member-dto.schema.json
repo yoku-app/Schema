@@ -1,15 +1,12 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/dto/member-dto.schema.json",
+    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/dto/member-dto.schema.json",
     "title": "OrgMemberDTO",
     "type": "object",
-    "required": ["id", "displayName", "email", "avatarUrl", "memberSince", "organisation"],
+    "required": ["user", "memberSince", "organisation", "position"],
     "properties": {
-        "id": { "type": "string", "format": "uuid" },
-        "displayName": { "type": "string" },
-        "email": { "type": "string", "format": "email" },
-        "avatarUrl": {
-            "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
+        "user": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/user/dto/user-partial-dto.schema.json"
         },
         "memberSince": {
             "type": "string",
@@ -17,7 +14,10 @@
             "tsType": "Date"
         },
         "organisation": {
-            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/dto/organisation-partial-dto.schema.json"
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/dto/organisation-partial-dto.schema.json"
+        },
+        "position": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/dto/position-partial-dto.schema.json"
         }
     },
     "additionalProperties": false

@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/dto/invite-dto.schema.json",
-    "title": "OrganisationInviteDTO",
+    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/dto/invite-dto.schema.json",
+    "title": "OrgInviteDTO",
     "type": "object",
     "required": [
         "id",
@@ -15,10 +15,10 @@
     "properties": {
         "id": { "type": "string", "format": "uuid" },
         "organisation": {
-            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/dto/organisation-partial-dto.schema.json"
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/dto/organisation-partial-dto.schema.json"
         },
-        "user" : {
-            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/dto/user-partial-dto.schema.json"
+        "user": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/user/dto/user-partial-dto.schema.json"
         },
         "email": { "type": "string", "format": "email" },
         "token": { "type": "string", "minLength": 12, "maxLength": 12 },

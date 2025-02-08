@@ -1,21 +1,20 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/dto/user-partial-dto.schema.json",
-    "title": "UserProfilePartialDTO",
+    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/user/dto/user-partial-dto.schema.json",
+    "title": "UserPartialDTO",
     "type": "object",
-    "required": [
-        "userId",
-        "email",
-        "displayName",
-        "avatarUrl"
-    ],
+    "required": ["id", "name", "email"],
     "properties": {
-        "userId": { "type": "string", "format": "uuid" },
+        "id": { "type": "string", "format": "uuid" },
+        "name": { "type": "string" },
+        "dob": {
+            "type": "string",
+            "format": "date",
+            "tsType": "Date",
+            "nullable": true
+        },
         "email": { "type": "string", "format": "email" },
-        "displayName": { "type": "string" },
-        "avatarUrl": {
-            "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
-        }
+        "avatarUrl": { "type": "string", "format": "uri", "nullable": true }
     },
     "additionalProperties": false
 }

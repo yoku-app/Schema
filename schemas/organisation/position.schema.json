@@ -1,0 +1,15 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/position.schema.json",
+    "title": "OrganisationPosition",
+    "type": "object",
+    "required": ["id", "organisationId", "name", "isDefault", "rank"],
+    "properties": {
+        "id": { "type": "string", "format": "uuid" },
+        "organisationId": { "type": "string", "format": "uuid" },
+        "name": { "type": "string" },
+        "isDefault": { "type": "boolean" },
+        "rank": { "type": "integer", "minimum": 0 }
+    },
+    "additionalProperties": false
+}

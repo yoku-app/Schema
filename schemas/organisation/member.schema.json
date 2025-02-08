@@ -1,9 +1,9 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/member.schema.json",
+    "$id": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/member.schema.json",
     "title": "OrganisationMember",
     "type": "object",
-    "required": ["id", "memberSince", "user", "organisation"],
+    "required": ["id", "memberSince", "organisation", "position"],
     "properties": {
         "id": {
             "type": "object",
@@ -19,13 +19,14 @@
             "format": "date-time",
             "tsType": "Date"
         },
-        "user": {
-            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/user/profile.schema.json"
-        },
-        "organisation": {
-            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/refs/heads/main/schemas/organisation/organisation.schema.json"
-        }
 
+        "organisation": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/organisation.schema.json"
+        },
+
+        "position": {
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/position.schema.json"
+        }
     },
     "additionalProperties": false
 }
