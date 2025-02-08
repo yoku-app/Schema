@@ -10,7 +10,7 @@
         "phone": { "type": "string" },
         "dob": {
             "type": "string",
-            "format": "date",
+            "format": "date-time",
             "tsType": "Date"
         },
         "email": { "type": "string", "format": "email" },
