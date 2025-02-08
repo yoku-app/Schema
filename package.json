@@ -1,6 +1,6 @@
 {
     "name": "@yoku-app/shared-schemas",
-    "version": "1.0.20",
+    "version": "1.0.21",
     "description": "Shared JSON Schemas for All Yoku Services and Clients",
     "scripts": {
         "generate-schema-map": "node scripts/generate-schema-map.js",
