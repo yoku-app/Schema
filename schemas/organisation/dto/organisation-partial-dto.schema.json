@@ -9,7 +9,9 @@
         "name": { "type": "string" },
         "description": { "type": "string" },
         "avatarURL": {
-            "oneOf": [{ "type": "string", "format": "uri" }, { "type": "null" }]
+            "type": "string",
+            "format": "uri",
+            "nullable": true
         },
         "publicStatus": { "type": "boolean" }
     },

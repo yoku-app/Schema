@@ -10,6 +10,22 @@
             "description": "Unique ID for the permission"
         },
         "name": {
+            "$ref": "#/$defs/PermissionName",
+            "description": "Permission name"
+        },
+        "description": {
+            "type": "string",
+            "nullable": true,
+            "description": "Optional description of the permission"
+        },
+        "requiresHierarchy": {
+            "type": "boolean",
+            "description": "Indicates if the permission requires hierarchy enforcement"
+        }
+    },
+    "additionalProperties": false,
+    "$defs": {
+        "PermissionName": {
             "type": "string",
             "enum": [
                 "ORGANISATION_EDIT",
@@ -29,17 +45,7 @@
                 "SURVEY_VIEW_RESULTS",
                 "AUDIT_VIEW",
                 "AUDIT_DOWNLOAD"
-            ],
-            "description": "Permission name"
-        },
-        "description": {
-            "type": "string",
-            "nullable": true,
-            "description": "Optional description of the permission"
-        },
-        "requiresHierarchy": {
-            "type": "boolean",
-            "description": "Indicates if the permission requires hierarchy enforcement"
+            ]
         }
     }
 }
