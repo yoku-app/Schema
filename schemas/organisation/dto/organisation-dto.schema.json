@@ -35,7 +35,7 @@
             "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/lookups/industry.schema.json"
         },
         "creator": {
-            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/user/profile.schema.json"
+            "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/user/dto/user-partial-dto.schema.json"
         }
     },
     "additionalProperties": false
