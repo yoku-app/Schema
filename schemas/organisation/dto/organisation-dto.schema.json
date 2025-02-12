@@ -11,7 +11,8 @@
         "memberCount",
         "surveyCreationCount",
         "publicStatus",
-        "averageSurveyReviewRating"
+        "averageSurveyReviewRating",
+        "orgType"
     ],
     "properties": {
         "id": { "type": "string", "format": "uuid" },

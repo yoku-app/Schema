@@ -3,7 +3,15 @@
     "$id": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/dto/organisation-partial-dto.schema.json",
     "title": "OrganisationPartialDTO",
     "type": "object",
-    "required": ["id", "name", "description", "publicStatus"],
+    "required": ["id", "name", "description", "publicStatus", "orgType"],
+    "orgType": {
+        "oneOf": [
+            {
+                "type": "string",
+                "enum": ["PERSONAL", "COMPANY", "EDUCATIONAL"]
+            }
+        ]
+    },
     "properties": {
         "id": { "type": "string", "format": "uuid" },
         "name": { "type": "string" },

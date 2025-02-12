@@ -8,6 +8,7 @@
         "creatorId",
         "name",
         "email",
+        "orgType",
         "memberCount",
         "publicStatus",
         "createdAt",
