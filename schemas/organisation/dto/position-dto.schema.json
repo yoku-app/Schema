@@ -19,7 +19,7 @@
         "permissions": {
             "type": "array",
             "items": {
-                "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/organisation/dto/permission-dto.schema.json"
+                "$ref": "https://raw.githubusercontent.com/yoku-app/Schema/main/schemas/lookups/org-permission.schema.json"
             }
         },
         "isDefault": { "type": "boolean" }
