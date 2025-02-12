@@ -5,7 +5,6 @@
     "type": "object",
     "required": [
         "id",
-        "industryId",
         "creatorId",
         "name",
         "email",
@@ -28,6 +27,14 @@
     "avatarURL": {
         "type": "string",
         "format": "uri"
+    },
+    "orgType": {
+        "oneOf": [
+            {
+                "type": "string",
+                "enum": ["PERSONAL", "COMPANY", "EDUCATIONAL"]
+            }
+        ]
     },
     "publicStatus": { "type": "boolean" },
     "createdAt": {
